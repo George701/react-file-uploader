@@ -4,9 +4,9 @@ import './App.css';
 
 
 const App = () => (
-      <div className="container mt-4">
-        <h4 className="display-4 text-center mb-4">
-            <i className="fab fa-react"/> React File Upload
+      <div className="container">
+        <h4 className="display-4 text-center react-header-text react-header-background react-header">
+            <i className="fab fa-react react-color"/> React File Upload
         </h4>
 
           <FileUpload/>

@@ -1,6 +1,7 @@
-import React, {Fragment, useState} from 'react'
-import Message from './Message'
-import Progress from './Progress'
+import React, {Fragment, useState} from 'react';
+import Message from './Message';
+import Progress from './Progress';
+import UploadedFile from './UploadedFile';
 import axios from 'axios';
 
 const FileUpload = () => {
@@ -53,7 +54,7 @@ const FileUpload = () => {
     return (
         <Fragment>
             {message ? <Message msg={message}/> : null}
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className="form-bot">
                 <div className="custom-file mb-4">
                     <input type="file" className="custom-file-input" id="customFile" onChange={onChange}/>
                     <label className="custom-file-label" htmlFor="customFile">{filename}</label>
@@ -61,17 +62,12 @@ const FileUpload = () => {
 
                 <Progress percentage={uploadPercentage}/>
 
-                <input type="submit" value="Upload" className="btn btn-primary btn-block mt-4"/>
+                <button type="submit" className="btn-upload mt-4">
+                    <i className="fas fa-upload fa-4x"/>
+                </button>
             </form>
 
-            {uploadedFile ? <div className="row mt-5">
-                <div className="col-md-6 m-auto">
-                    <h3 className="text-center">
-                        {uploadedFile.fileName}
-                    </h3>
-                    <img style={{width: '100%'}} src={uploadedFile.filePath} alt=""/>
-                </div>
-            </div> : null }
+            {uploadedFile ? <UploadedFile file={uploadedFile}/> : null }
 
         </Fragment>
     )

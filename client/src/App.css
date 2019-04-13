@@ -1,0 +1,56 @@
+.react-header-text{
+    color: #EEE;
+}
+
+.react-color{
+    color: #00D8FF;
+}
+
+.react-header-background{
+    background: #222;
+}
+
+.react-header{
+    margin: 0;
+    padding: 1.5rem 0;
+}
+
+.react-message{
+    margin: 0;
+    padding: 1.5rem 5rem;
+}
+
+.form-bot{
+    background: #222;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding: 0 5rem 8rem 5rem;
+}
+
+.btn-upload{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: none;
+    background-color: unset;
+    color: #00D8FF;
+}
+
+.btn-upload:hover{
+    color: #76eeff;
+}
+
+.btn-upload:focus{
+    outline:0;
+    color: #007fa2;
+}
+
+.upload-block{
+    display: flex;
+    flex-direction: row;
+}
+
+.upload-file{
+    max-width: 45%;
+    max-height: 26rem;
+}
