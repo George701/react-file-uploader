@@ -1,0 +1,26 @@
+{
+  "name": "react-file-uploader",
+  "version": "1.0.0",
+  "description": "Simple file uploader. As a back end - express, as front end - react. ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/George701/react-file-uploader.git"
+  },
+  "author": "Georgii Chernikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/George701/react-file-uploader/issues"
+  },
+  "homepage": "https://github.com/George701/react-file-uploader#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4"
+  }
+}
